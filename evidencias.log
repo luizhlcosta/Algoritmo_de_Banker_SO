@@ -1,0 +1,13 @@
+Script started on 2026-11-15 17:34:48-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="59" LINES="19"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker
+[?2004lBanker iniciado com sucesso.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make ce[Klean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-15 17:36:10-03:00 [COMMAND_EXIT_CODE="0"]
