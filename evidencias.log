@@ -11,3 +11,104 @@ Run `unset PREFIX` to unset it.
 [?2004lexit
 
 Script done on 2026-11-15 17:36:10-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-15 17:42:10-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="97" LINES="19"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make 
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 5 7
+[?2004lQuantidade de recursos: 3
+Recurso 0: 10 instancias
+Recurso 1: 5 instancias
+Recurso 2: 7 instancias
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./ n[K[Kbanker
+[?2004lErro: informe os recursos.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 abc 7
+[?2004lErro: recurso invalido: abc
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ 10 - 5[K[K[K5[K-5 7
+[?2004l10: command not found
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 -5 7
+[?2004lErro: recurso invalido: -5
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 5abc [C[C[C[C[C[C[1@1[1@0[C[1@ [1@ [C[C[C[C[1P[C[C[C[C[C 7 
+[?2004lErro: recurso invalido: 5abc
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ 10 2147483648 7
+[?2004l10: command not found
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ 10 2147483648 7[1@.[1@/[1@b[1@a[1@n[1@k[1@e[1@r[1@ 
+[?2004lErro: recurso invalido: 2147483648
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ amke[K[K[K[Kmake clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make clean./banker 10 2147483648 7[C[C[C[C[C[C[C[C[C[C[C[C[9P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9@./banker [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pmake clean[Kmake clean./banker 10 2147483648 7[C[C[C[C[C[C[C[C[C[C[C[C[9P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./banker 10 5abc 7 [3P-5 7[C[C[C[C[C[C[C[C[C[C[C[C[9P[C[C[C[C[C[C[C[10@./banker 10 abc[C[C[K 10 5 7[C[C[C[C[C[C[C[C[C[C[C[C[10PmakeScript started on 2026-11-15 18:42:25-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="59" LINES="19"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exot[K[Ko[Kit
+[?2004lexit
+
+Script done on 2026-11-15 18:42:34-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-15 18:45:51-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="59" LINES="19"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ maken[K clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mae[Kke 
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker
+[?2004lErro: informe os recursos.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 50 [K[K 7
+[?2004lErro ao abrir customer.txt: No such file or directory
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 5 7
+[?2004l clean[6Pexitmake clean[2P./banker[4Pmake run[K runyt-dlp [?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cyt-dlp -x --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=Do8oqR2TR1M&list=RDDo8oqR2TR1M&start_radio=1"[A[A[23Psudo apt  install yt-dlp
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cyt-dlp -x --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=Do8oqR2TR1M&list=RDDo8oqR2TR1M&start_radio=1"[A[Amake run[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K run[K./bankermake clean[6Pexitmake clean[K./banker 10 5 7[K 10 abc 7[C[C[C[C[C[C[C[C[C[C[C[C[10P10 -5[C[C[9@./banker [C[C[C[C[C[C[C5abc 7 [C[C[C[C[C[C[C[C[C[C[C[C[4P10 2147483648 7[C[C[C[C[C[C[C[C[C[C[C[C[9@./banker [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pmake clean[Kscript -a -f evidencias.log
+[?2004lScript started, output log file is 'evidencias.log'.
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exot[K[Ko[Kit
+[?2004lexit
+Script done.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ scr[K[K[Kscript -a -f evidencias.log[C[C[C[C[C[C[C[C[C[C[C[C[17Pmake cleanscript -a -f evidencias.log
+[?2004lScript started, output log file is 'evidencias.log'.
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ maken[K clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mae[Kke 
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker
+[?2004lErro: informe os recursos.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 50 [K[K 7
+[?2004lErro ao abrir customer.txt: No such file or directory
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 5 7
+[?2004lClientes encontrados: 5
+Tipos de recursos: 3
+
+Matriz Maximum:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3[7mcp customer.txt customer.backup[27m[C[C[C[C[C[C[C[C[C[C[C[Ccp customer.txt customer.backup
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7mprintf '7,5\n3,2,2\n' > customer.txt[27m
+[7m./banker 10 5 7[27m[Aprintf '7,5\n3,2,2\n' > customer.txt
+./banker 10 5 7
+[?2004lErro de formato na linha 1.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 5 7[C[C[C[C[C[C[C[C[C[C[C[Cprintf '7,5\n3,2,2\n' > customer.txt[C[C[C[C[C[C[C[C[C[C[C[C[21P./banker 10 5 7
+[?2004lErro de formato na linha 1.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mv cosutm[K[K[Ktumer [K[K[K[K[K[K[K[Kustemer [K[K[K[K[Komer [K [K.backup [K customer.txt
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mv customer.backup customer.txt[C[C[C[C[C[C[C[C[C[C[C[C[16P./banker 10 5 7
+[?2004lClientes encontrados: 5
+Tipos de recursos: 3
+
+Matriz Maximum:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-15 18:48:12-03:00 [COMMAND_EXIT_CODE="0"]
