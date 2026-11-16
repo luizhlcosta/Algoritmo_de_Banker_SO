@@ -21,6 +21,15 @@ typedef struct Banker {
     int *matriz_necessidade;
 } Banker;
 
+
+typedef enum {
+    SOLICITACAO_ACEITA,
+    LIMITE_EXCEDIDO,
+    RECURSOS_INSUFICIENTES,
+    ESTADO_INSEGURO,
+    ERRO_SOLICITACAO
+} ResultadoSolicitacao;
+
 int inicializar_banker(Banker *banker) {
 
     size_t clientes = banker->numero_clientes;
@@ -164,6 +173,128 @@ int carregar_clientes(const char *nome_arquivo, int numero_recursos, const int *
     *numero_clientes = clientes;
 
     return 1;
+}
+
+int verificar_seguranca(Banker *banker) {
+
+    size_t clientes = banker->numero_clientes;
+    int recursos = banker->numero_recursos;
+
+    int *trabalho = malloc(recursos * sizeof(int));
+    int *finalizados = calloc(clientes, sizeof(int));
+
+    if (trabalho == NULL || finalizados == NULL) {
+        fprintf(stderr, "Erro ao alocar memoria.\n");
+        free(trabalho);
+        free(finalizados);
+        return -1;
+    }
+
+    for (int j = 0; j < recursos; j++) {
+        trabalho[j] = banker->disponiveis[j];
+    }
+
+    int progresso = 1;
+
+    while (progresso) {
+        progresso = 0;
+
+        for (size_t i = 0; i < clientes; i++) {
+            if (finalizados[i]) {
+                continue;
+            }
+
+            int pode_finalizar = 1;
+
+            for (int j = 0; j < recursos; j++) {
+                if (banker->matriz_necessidade[i * recursos + j] > trabalho[j]) {
+                    pode_finalizar = 0;
+                    break;
+                }
+            }
+
+            if (pode_finalizar) {
+                for (int j = 0; j < recursos; j++) {
+                    trabalho[j] += banker->matriz_necessidade[i * recursos + j];
+                }
+
+                finalizados[i] = 1;
+                progresso = 1;
+            }
+        }
+    }
+
+    int seguro = 1;
+
+    for (size_t i = 0; i < clientes; i++) {
+        if (!finalizados[i]) {
+            seguro = 0;
+            break;
+        }
+    }
+
+    free(trabalho);
+    free(finalizados);
+
+    return seguro;
+}
+
+
+int solicitar_recursos(Banker *banker, size_t cliente, const int *recursos_solicitados) {
+
+    if (cliente >= banker->numero_clientes || recursos_solicitados == NULL) {
+        return ERRO_SOLICITACAO;
+    }
+
+    int recursos = banker->numero_recursos;
+
+    for (int j = 0; j < recursos; j++) {
+
+        size_t index = cliente * (size_t)recursos + (size_t)j;
+
+        if (recursos_solicitados[j] < 0) {
+            return ERRO_SOLICITACAO;
+        }
+
+        if (recursos_solicitados[j] > banker->matriz_necessidade[index]) {
+            return LIMITE_EXCEDIDO;
+        }
+
+        if (recursos_solicitados[j] > banker->disponiveis[j]) {
+            return RECURSOS_INSUFICIENTES;
+        }
+    }
+
+    for (int j = 0; j < recursos; j++) {
+
+        size_t index = cliente * (size_t)recursos + (size_t)j;
+
+        banker->disponiveis[j] -= recursos_solicitados[j];
+        banker->matriz_alocacao[index] += recursos_solicitados[j];
+        banker->matriz_necessidade[index] -= recursos_solicitados[j];
+    }
+
+    int resultado = verificar_seguranca(banker);
+
+    if (resultado != 1) {
+
+        for (int j = 0; j < recursos; j++) {
+
+            size_t index = cliente * (size_t)recursos + (size_t)j;
+
+            banker->disponiveis[j] += recursos_solicitados[j];
+            banker->matriz_alocacao[index] -= recursos_solicitados[j];
+            banker->matriz_necessidade[index] += recursos_solicitados[j];
+        }
+
+        if (resultado == -1) {
+            return ERRO_SOLICITACAO;
+        }
+
+        return ESTADO_INSEGURO;
+    }
+
+    return SOLICITACAO_ACEITA;
 }
 
 
