@@ -224,3 +224,229 @@ Matriz Need:
 [?2004lexit
 
 Script done on 2026-11-16 14:04:20-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-16 14:40:07-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="74" LINES="13"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./b ankert [K[K [K 10 5 7
+[?2004lClientes encontrados: 5
+Tipos de recursos: 3
+
+Matriz Maximum:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+
+Recursos disponiveis:
+10 5 7 
+
+Matriz Allocation:
+0 0 0 
+0 0 0 
+0 0 0 
+0 0 0 
+0 0 0 
+
+Matriz Need:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ git  add banker.c evidencias.log [K
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ git  comi[Kmit -m " [Kadiciona requi [Ksicao e lieb[K[Kberacao de recursos"
+[?2004l[main c524ce3] adiciona requisicao e liberacao de recursos
+ 1 file changed, 131 insertions(+)
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exi t [K
+[?2004lexit
+
+Script done on 2026-11-16 14:42:03-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-16 15:18:48-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="97" LINES="12"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[01m[Kbanker.c:[m[K In function ‘[01m[Kexecutar_comandos[m[K’:
+[01m[Kbanker.c:404:13:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kstrncmp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  404 |         if ([01;35m[Kstrncmp[m[K(posicao, "RQ", 2) == 0 && isspace((unsigned char)posicao[2])) {
+      |             [01;35m[K^~~~~~~[m[K
+[01m[Kbanker.c:11:1:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<string.h>[m[K’ or provide a declaration of ‘[01m[Kstrncmp[m[K’
+   10 | #include <sys/types.h>
+  +++ |+[32m[K#include <string.h>[m[K
+   11 | 
+[01m[Kbanker.c:404:36:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncmp[m[K’ argument 3 type is ‘[01m[Kint[m[K’ where ‘[01m[Klong unsigned int[m[K’ is expected in a call to built-in function declared without prototype [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+  404 |         if (strncmp(posicao, "RQ", [01;35m[K2[m[K) == 0 && isspace((unsigned char)posicao[2])) {
+      |                                    [01;35m[K^[m[K
+[01m[K<built-in>:[m[K [01;36m[Knote: [m[Kbuilt-in ‘[01m[Kstrncmp[m[K’ declared here
+[01m[Kbanker.c:408:43:[m[K [01;35m[Kwarning: [m[K‘[01m[Kstrncmp[m[K’ argument 3 type is ‘[01m[Kint[m[K’ where ‘[01m[Klong unsigned int[m[K’ is expected in a call to built-in function declared without prototype [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+  408 |         } else if (strncmp(posicao, "RL", [01;35m[K2[m[K) == 0 && isspace((unsigned char)posicao[2])) {
+      |                                           [01;35m[K^[m[K
+[01m[K<built-in>:[m[K [01;36m[Knote: [m[Kbuilt-in ‘[01m[Kstrncmp[m[K’ declared here
+[01m[Kbanker.c:512:18:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kliberar_recursos[m[K’; did you mean ‘[01m[Ksolicitar_recursos[m[K’? [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  512 |             if (![01;35m[Kliberar_recursos[m[K(banker, cliente, vetor_recursos_solicitados)) {
+      |                  [01;35m[K^~~~~~~~~~~~~~~~[m[K
+      |                  [32m[Ksolicitar_recursos[m[K
+/bin/ld: /tmp/ccZzr28E.o: in function `executar_comandos':
+banker.c:(.text+0x14fb): undefined reference to `liberar_recursos'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:9: banker] Error 1
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[01m[Kbanker.c:[m[K In function ‘[01m[Kexecutar_comandos[m[K’:
+[01m[Kbanker.c:513:18:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kliberar_recursos[m[K’; did you mean ‘[01m[Ksolicitar_recursos[m[K’? [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  513 |             if (![01;35m[Kliberar_recursos[m[K(banker, cliente, vetor_recursos_solicitados)) {
+      |                  [01;35m[K^~~~~~~~~~~~~~~~[m[K
+      |                  [32m[Ksolicitar_recursos[m[K
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make
+[?2004lmake: Warning: File 'banker.c' has modification time 0.38 s in the future
+gcc -Wall -Wextra -std=c11 banker.c -o banker
+[01m[Kbanker.c:[m[K In function ‘[01m[Kexecutar_comandos[m[K’:
+[01m[Kbanker.c:513:18:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kliberar_recursos[m[K’; did you mean ‘[01m[Ksolicitar_recursos[m[K’? [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  513 |             if (![01;35m[Kliberar_recursos[m[K(banker, cliente, vetor_recursos_solicitados)) {
+      |                  [01;35m[K^~~~~~~~~~~~~~~~[m[K
+      |                  [32m[Ksolicitar_recursos[m[K
+make: warning:  Clock skew detected.  Your build may be incomplete.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTScript started on 2026-11-16 15:32:23-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="155" LINES="24"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exitcat result.txt./banker 10 5 7[1Pcat result.txtexit[Kcat result.txt./banker 10 5 7make[K clean[K clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make clean[6Pexitcat result.txt./banker 10 5 7make[K
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make clean[6Pexitcat result.txt./banker 10 5 7make[K./banker 10 5 7
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 5 7make[K clean[6Pexitcat result.txt
+[?2004lAllocate to customer 0 the resources 0 2 1
+Allocate to customer 2 the resources 3 0 2
+Allocate to customer 1 the resources 2 0 0
+Allocate to customer 4 the resources 0 0 2
+Release from customer 0 the resources 0 1 1
+Allocate to customer 3 the resources 2 1 1
+MAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 1 0 | 7 4 3 
+3 2 2 | 2 0 0 | 1 2 2 
+9 0 2 | 3 0 2 | 6 0 0 
+2 2 2 | 2 1 1 | 0 1 1 
+4 3 3 | 0 0 2 | 4 3 1 
+AVAILABLE 3 3 2
+The resources 3 3 2 are not enough to customer 4 request 4 0 0
+The customer 1 request 1 0 2 was denied because result in an unsafe state
+Allocate to customer 0 the resources 0 2 0
+The customer 2 request 0 1 0 was denied because exceed its maximum allocation
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-16 15:32:46-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-16 15:34:42-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="194" LINES="13"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make clena[K[Kan
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make clean[6Pexitcat result.txt./banker 10 5 7
+[?2004lbash: ./banker: No such file or directory
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make./banker 10 5 7
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 5 7make[K./banker 10 5 7[5Pmake clean[6Pexitcat result.txt
+[?2004lAllocate to customer 0 the resources 0 2 1
+Allocate to customer 2 the resources 3 0 2
+Allocate to customer 1 the resources 2 0 0
+Allocate to customer 4 the resources 0 0 2
+Release from customer 0 the resources 0 1 1
+Allocate to customer 3 the resources 2 1 1
+MAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 1 0 | 7 4 3 
+3 2 2 | 2 0 0 | 1 2 2 
+9 0 2 | 3 0 2 | 6 0 0 
+2 2 2 | 2 1 1 | 0 1 1 
+4 3 3 | 0 0 2 | 4 3 1 
+AVAILABLE 3 3 2
+The resources 3 3 2 are not enough to customer 4 request 4 0 0
+Allocate to customer 1 the resources 1 0 2
+The customer 0 request 0 2 0 was denied because result in an unsafe state
+The customer 2 request 0 1 0 was denied because exceed its maximum allocation
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ cat result.txt./banker 10 5 7[1Pcat result.txt./banker 10 5 7make[K./banker 10 5 7[5Pmake clean./banker 10 5 7make[K
+[?2004lmake: Nothing to be done for 'all'.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ makecat result.txt./banker 10 5 7
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 5 7make[K./banker 10 5 7[K./banker 10 5 7make[Kcat result.txt./banker 10 5 7[1Pcat result.txt
+[?2004lAllocate to customer 0 the resources 0 2 1
+Allocate to customer 2 the resources 3 0 2
+Allocate to customer 1 the resources 2 0 0
+Allocate to customer 4 the resources 0 0 2
+Release from customer 0 the resources 0 1 1
+Allocate to customer 3 the resources 2 1 1
+MAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 1 0 | 7 4 3 
+3 2 2 | 2 0 0 | 1 2 2 
+9 0 2 | 3 0 2 | 6 0 0 
+2 2 2 | 2 1 1 | 0 1 1 
+4 3 3 | 0 0 2 | 4 3 1 
+AVAILABLE 3 3 2
+The resources 3 3 2 are not enough to customer 4 request 4 0 0
+Allocate to customer 1 the resources 1 0 2
+The customer 0 request 0 2 0 was denied because result in an unsafe state
+The customer 2 request 0 1 0 was denied because exceed its maximum allocation
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e [K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[Kexi t
+[?2004lexit
+
+Script done on 2026-11-16 15:49:43-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-16 16:06:22-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="79" LINES="3"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ man[Kke cle an
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ make
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker  [K10 5 7
+[?2004lbash: ./banker10: No such file or directory
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker10 5 7[K7[1@ 
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ cat result.txt
+[?2004lAllocate to customer 0 the resources 0 2 1
+Allocate to customer 2 the resources 3 0 2
+Allocate to customer 1 the resources 2 0 0
+Allocate to customer 4 the resources 0 0 2
+Release from customer 0 the resources 0 1 1
+Allocate to customer 3 the resources 2 1 1
+MAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 1 0 | 7 4 3 
+3 2 2 | 2 0 0 | 1 2 2 
+9 0 2 | 3 0 2 | 6 0 0 
+2 2 2 | 2 1 1 | 0 1 1 
+4 3 3 | 0 0 2 | 4 3 1 
+AVAILABLE 3 3 2
+The resources 3 3 2 are not enough to customer 4 request 4 0 0
+Allocate to customer 1 the resources 1 0 2
+The customer 0 request 0 2 0 was denied because result in an unsafe state
+The customer 2 request 0 1 0 was denied because exceed its maximum allocation
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-16 16:07:07-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-16 16:08:15-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="97" LINES="29"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7mprintf '1,0\n1,1\n' > cust[27m[7mo[27m[7mmer.txt[27m[A]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ printf '1,0\n1,1\n' > customer.txt
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7mprintf 'RQ 1 1 0\nRQ 0 1 1[27m[7m\[27m[7mn' > commands.txt[27m[A]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ printf 'RQ 1 1 0\nRQ 0 1 1\n' > commands.txt
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7m./banker 1 1[27m./banker 1 1
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7mcat result.txt[27mcat result.txt
+[?2004lAllocate to customer 1 the resources 1 0
+The customer 0 request 1 1 was denied because exceed its maximum allocation
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7mmv customer_backup.txt cus[27m[7mt[27m[7momer.txt[27m[A]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mv customer_backup.txt customer.txt
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7mmv commands_backup.txt com[27m[7mm[27m[7mands.txt [27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmv commands_backup.txt commands.txt
+[A
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-16 16:08:52-03:00 [COMMAND_EXIT_CODE="0"]

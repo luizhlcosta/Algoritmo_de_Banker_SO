@@ -8,6 +8,7 @@
 #include <stdint.h>
 #include <ctype.h>
 #include <sys/types.h>
+#include <string.h>
 
 typedef struct Banker {
     int numero_recursos;
@@ -215,7 +216,7 @@ int verificar_seguranca(Banker *banker) {
 
             if (pode_finalizar) {
                 for (int j = 0; j < recursos; j++) {
-                    trabalho[j] += banker->matriz_necessidade[i * recursos + j];
+                    trabalho[j] += banker->matriz_alocacao[i * recursos + j];
                 }
 
                 finalizados[i] = 1;
@@ -248,6 +249,7 @@ int solicitar_recursos(Banker *banker, size_t cliente, const int *recursos_solic
 
     int recursos = banker->numero_recursos;
 
+
     for (int j = 0; j < recursos; j++) {
 
         size_t index = cliente * (size_t)recursos + (size_t)j;
@@ -259,11 +261,15 @@ int solicitar_recursos(Banker *banker, size_t cliente, const int *recursos_solic
         if (recursos_solicitados[j] > banker->matriz_necessidade[index]) {
             return LIMITE_EXCEDIDO;
         }
+    }
+
+    for (int j = 0; j < recursos; j++) {
 
         if (recursos_solicitados[j] > banker->disponiveis[j]) {
             return RECURSOS_INSUFICIENTES;
         }
     }
+
 
     for (int j = 0; j < recursos; j++) {
 
@@ -296,6 +302,282 @@ int solicitar_recursos(Banker *banker, size_t cliente, const int *recursos_solic
 
     return SOLICITACAO_ACEITA;
 }
+
+
+void exibir_estado(Banker *banker, FILE *arquivo_resultado) {
+
+    int recursos = banker->numero_recursos;
+
+    fprintf(arquivo_resultado, "MAXIMUM | ALLOCATION | NEED\n");
+
+    for (size_t i = 0; i < banker->numero_clientes; i++) {
+
+        for (int j = 0; j < recursos; j++) {
+            size_t index = i * (size_t)recursos + (size_t)j;
+            fprintf(arquivo_resultado, "%d ", banker->matriz_max[index]);
+        }
+
+        fprintf(arquivo_resultado, "| ");
+
+        for (int j = 0; j < recursos; j++) {
+            size_t index = i * (size_t)recursos + (size_t)j;
+            fprintf(arquivo_resultado, "%d ", banker->matriz_alocacao[index]);
+        }
+
+        fprintf(arquivo_resultado, "| ");
+
+        for (int j = 0; j < recursos; j++) {
+            size_t index = i * (size_t)recursos + (size_t)j;
+            fprintf(arquivo_resultado, "%d ", banker->matriz_necessidade[index]);
+        }
+
+        fprintf(arquivo_resultado, "\n");
+    }
+
+    fprintf(arquivo_resultado, "AVAILABLE");
+
+    for (int j = 0; j < recursos; j++) {
+        fprintf(arquivo_resultado, " %d", banker->disponiveis[j]);
+    }
+
+    fprintf(arquivo_resultado, "\n");
+}
+
+int liberar_recursos(Banker *banker, size_t cliente, const int *recursos_liberados) {
+
+    if (cliente >= banker->numero_clientes || recursos_liberados == NULL) {
+        return 0;
+    }
+
+    int recursos = banker->numero_recursos;
+
+    for (int j = 0; j < recursos; j++) {
+
+        size_t index = cliente * (size_t)recursos + (size_t)j;
+
+        if (recursos_liberados[j] < 0 || recursos_liberados[j] > banker->matriz_alocacao[index]) {
+            return 0;
+        }
+    }
+
+    for (int j = 0; j < recursos; j++) {
+
+        size_t index = cliente * (size_t)recursos + (size_t)j;
+
+        banker->disponiveis[j] += recursos_liberados[j];
+        banker->matriz_alocacao[index] -= recursos_liberados[j];
+        banker->matriz_necessidade[index] += recursos_liberados[j];
+    }
+
+    return 1;
+}
+
+int executar_comandos(Banker *banker) {
+
+    FILE *arquivo_de_comandos = fopen("commands.txt", "r");
+
+    if (arquivo_de_comandos == NULL) {
+        printf("Erro ao abrir commands.txt.\n");
+        return 0;
+    }
+
+    FILE *arquivo_resultado = fopen("result.txt", "w");
+
+    if (arquivo_resultado == NULL) {
+        printf("Erro ao criar result.txt.\n");
+        fclose(arquivo_de_comandos);
+        return 0;
+    }
+
+    char *linha = NULL;
+    size_t tamanho = 0;
+    size_t linha_atual = 0;
+    int erro = 0;
+
+    int recursos = banker->numero_recursos;
+    int *vetor_recursos_solicitados = calloc((size_t)recursos, sizeof(int));
+
+    if (vetor_recursos_solicitados == NULL) {
+        printf("Erro ao alocar memoria.\n");
+        fclose(arquivo_de_comandos);
+        fclose(arquivo_resultado);
+        return 0;
+    }
+
+    while (getline(&linha, &tamanho, arquivo_de_comandos) != -1) {
+
+        linha_atual++;
+
+        char *posicao = linha;
+        char *fim;
+
+        while (isspace((unsigned char)*posicao)) {
+            posicao++;
+        }
+
+        if (*posicao == '*') {
+
+            posicao++;
+
+            while (isspace((unsigned char)*posicao)) {
+                posicao++;
+            }
+
+            if (*posicao != '\0') {
+                printf("Comando invalido na linha %zu.\n", linha_atual);
+                erro = 1;
+                break;
+            }
+
+            exibir_estado(banker, arquivo_resultado);
+            continue;
+        }
+
+        int requisicao;
+
+        if (strncmp(posicao, "RQ", 2) == 0 && isspace((unsigned char)posicao[2])) {
+            requisicao = 1;
+            posicao += 2;
+
+        } else if (strncmp(posicao, "RL", 2) == 0 && isspace((unsigned char)posicao[2])) {
+            requisicao = 0;
+            posicao += 2;
+
+        } else {
+            printf("Comando invalido na linha %zu.\n", linha_atual);
+            erro = 1;
+            break;
+        }
+
+        errno = 0;
+        long valor_cliente = strtol(posicao, &fim, 10);
+
+        if (errno == ERANGE || fim == posicao || valor_cliente < 0 ||
+            (uintmax_t)valor_cliente >= banker->numero_clientes ||
+            !isspace((unsigned char)*fim)) {
+
+            printf("Cliente invalido na linha %zu.\n", linha_atual);
+            erro = 1;
+            break;
+        }
+
+        size_t cliente = (size_t)valor_cliente;
+        posicao = fim;
+
+        for (int j = 0; j < recursos; j++) {
+
+            errno = 0;
+            long valor = strtol(posicao, &fim, 10);
+
+            if (errno == ERANGE || fim == posicao || valor < 0 || valor > INT_MAX) {
+                printf("Recurso invalido na linha %zu.\n", linha_atual);
+                erro = 1;
+                break;
+            }
+
+            if (j < recursos - 1 && !isspace((unsigned char)*fim)) {
+                printf("Formato invalido na linha %zu.\n", linha_atual);
+                erro = 1;
+                break;
+            }
+
+            vetor_recursos_solicitados[j] = (int)valor;
+            posicao = fim;
+        }
+
+        if (erro) {
+            break;
+        }
+
+        while (isspace((unsigned char)*posicao)) {
+            posicao++;
+        }
+
+        if (*posicao != '\0') {
+            printf("Formato invalido na linha %zu.\n", linha_atual);
+            erro = 1;
+            break;
+        }
+
+        if (requisicao) {
+
+            int resultado = solicitar_recursos(banker, cliente, vetor_recursos_solicitados);
+
+            if (resultado == ERRO_SOLICITACAO) {
+                printf("Erro na solicitacao da linha %zu.\n", linha_atual);
+                erro = 1;
+                break;
+            }
+
+            if (resultado == SOLICITACAO_ACEITA) {
+
+                fprintf(arquivo_resultado, "Allocate to customer %zu the resources", cliente);
+
+            } else if (resultado == RECURSOS_INSUFICIENTES) {
+
+                fprintf(arquivo_resultado, "The resources");
+
+                for (int j = 0; j < recursos; j++) {
+                    fprintf(arquivo_resultado, " %d", banker->disponiveis[j]);
+                }
+
+                fprintf(arquivo_resultado, " are not enough to customer %zu request", cliente);
+
+            } else {
+                fprintf(arquivo_resultado, "The customer %zu request", cliente);
+            }
+
+            for (int j = 0; j < recursos; j++) {
+                fprintf(arquivo_resultado, " %d", vetor_recursos_solicitados[j]);
+            }
+
+            if (resultado == LIMITE_EXCEDIDO) {
+                fprintf(arquivo_resultado, " was denied because exceed its maximum allocation");
+            }
+
+            if (resultado == ESTADO_INSEGURO) {
+                fprintf(arquivo_resultado, " was denied because result in an unsafe state");
+            }
+
+            fprintf(arquivo_resultado, "\n");
+
+        } else {
+
+            if (!liberar_recursos(banker, cliente, vetor_recursos_solicitados)) {
+                printf("Liberacao invalida na linha %zu.\n", linha_atual);
+                erro = 1;
+                break;
+            }
+
+            fprintf(arquivo_resultado, "Release from customer %zu the resources", cliente);
+
+            for (int j = 0; j < recursos; j++) {
+                fprintf(arquivo_resultado, " %d", vetor_recursos_solicitados[j]);
+            }
+
+            fprintf(arquivo_resultado, "\n");
+        }
+    }
+
+    if (ferror(arquivo_de_comandos) || ferror(arquivo_resultado)) {
+        printf("Erro durante a leitura ou escrita dos arquivos.\n");
+        erro = 1;
+    }
+
+    free(linha);
+    free(vetor_recursos_solicitados);
+
+    if (fclose(arquivo_de_comandos) != 0) {
+        erro = 1;
+    }
+
+    if (fclose(arquivo_resultado) != 0) {
+        erro = 1;
+    }
+
+    return !erro;
+}
+
 
 
 int main(int argc, char *argv[]) {
@@ -348,41 +630,10 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
-    printf("Clientes encontrados: %zu\n", banker.numero_clientes);
-    printf("Tipos de recursos: %d\n", banker.numero_recursos);
+    if (!executar_comandos(&banker)) {
 
-    printf("\nMatriz Maximum:\n");
-
-    for (size_t i = 0; i < banker.numero_clientes; i++) {
-        for (int j = 0; j < banker.numero_recursos; j++) {
-            printf("%d ", banker.matriz_max[i * (size_t)banker.numero_recursos + (size_t)j]);
-        }
-        printf("\n");
-    }
-
-    printf("\nRecursos disponiveis:\n");
-
-    for (int j = 0; j < banker.numero_recursos; j++) {
-        printf("%d ", banker.disponiveis[j]);
-    }
-    printf("\n");
-
-    printf("\nMatriz Allocation:\n");
-
-    for (size_t i = 0; i < banker.numero_clientes; i++) {
-        for (int j = 0; j < banker.numero_recursos; j++) {
-            printf("%d ", banker.matriz_alocacao[i * (size_t)banker.numero_recursos + (size_t)j]);
-        }
-        printf("\n");
-    }
-
-    printf("\nMatriz Need:\n");
-
-    for (size_t i = 0; i < banker.numero_clientes; i++) {
-        for (int j = 0; j < banker.numero_recursos; j++) {
-            printf("%d ", banker.matriz_necessidade[i * (size_t)banker.numero_recursos + (size_t)j]);
-        }
-        printf("\n");
+        liberar_banker(&banker);
+        return EXIT_FAILURE;
     }
 
     liberar_banker(&banker);
