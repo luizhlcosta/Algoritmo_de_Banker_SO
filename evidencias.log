@@ -112,3 +112,115 @@ Matriz Maximum:
 [?2004lexit
 
 Script done on 2026-11-15 18:48:12-03:00 [COMMAND_EXIT_CODE="0"]
+ 
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7mcp customer.txt customer.backup[27m[C[C[C[C[C[C[C[C[C[C[C[Ccp customer.txt customer.backup
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [7mprintf '7,5\n3,2,2\n' > customer.txt[27m
+[7m./banker 10 5 7[27m[Aprintf '7,5\n3,2,2\n' > customer.txt
+./banker 10 5 7
+[?2004lErro de formato na linha 1.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./banker 10 5 7[C[C[C[C[C[C[C[C[C[C[C[Cprintf '7,5\n3,2,2\n' > customer.txt[C[C[C[C[C[C[C[C[C[C[C[C[21P./banker 10 5 7
+[?2004lErro de formato na linha 1.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mv cosutm[K[K[Ktumer [K[K[K[K[K[K[K[Kustemer [K[K[K[K[Komer [K [K.backup [K customer.txt
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mv customer.backup customer.txt[C[C[C[C[C[C[C[C[C[C[C[C[16P./banker 10 5 7
+[?2004lClientes encontrados: 5
+Tipos de recursos: 3
+
+Matriz Maximum:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exit
+[?2004lexit
+Script done.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ git add banker [K. [K[K.c evidencias [K.log
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ gi [K[K[Kgit add [K[K[K[K[K[K[K[Kgit add [K[K[K[Kcommit - [Km ""i"m"p"l"e"m"e"n"t"a" "l"e"i"t"r"u"a"[1P"[1P"[1P"u"r"a" "e" "v"a"l"i"a"d"[1P"[1P"d"a"c"a"o" " [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd"e" "c"l"i"e"n"t"e"s"[K[A[K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ git commit -m "implementa 
+leitura e validacao de clientes"[K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ git
+ commit -m "implementa leitura e validacao de clientes"[K[A[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ git commit -m "implementa leitura e validacao de clientes"[27Padd banker.c evidencias.logcommit -m "implementa leitura e validacao de clientes"[27Padd banker.c evidencias.log
+[?2004l[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ git [K[K[K[K[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ got  co[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ [K]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ scr ipt -a evidencias [K.o[Klog
+[?2004lScript started, output log file is 'evidencias.log'.
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Script started on 2026-11-15 19:48:20-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="74" LINES="12"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e clean
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[Kmak e
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./b anker 10 5 7
+[?2004lClientes encontrados: 5
+Tipos de recursos: 3
+
+Matriz Maximum:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+
+Recursos disponiveis:
+10 5 7 
+
+Matriz Allocation:
+0 0 0 
+0 0 0 
+0 0 0 
+0 0 0 
+0 0 0 
+
+Matriz Need:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ exi t
+[?2004lexit
+
+Script done on 2026-11-15 19:48:57-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-16 14:03:35-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="74" LINES="13"]
+nvm is not compatible with the "PREFIX" environment variable: currently set to "/home/luizhlcosta/InfrSW/toolchain/x86_64"
+Run `unset PREFIX` to unset it.
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e clena[K[Kan
+[?2004lrm -f banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ mak e
+[?2004lgcc -Wall -Wextra -std=c11 banker.c -o banker
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ ./b anker 10 7[K5 7
+[?2004lClientes encontrados: 5
+Tipos de recursos: 3
+
+Matriz Maximum:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+
+Recursos disponiveis:
+10 5 7 
+
+Matriz Allocation:
+0 0 0 
+0 0 0 
+0 0 0 
+0 0 0 
+0 0 0 
+
+Matriz Need:
+7 5 3 
+3 2 2 
+9 0 2 
+2 2 2 
+4 3 3 
+[?2004h]0;luizhlcosta@DESKTOP-233HMBM: /mnt/c/Users/luizh/Algoritmo_de_Banker_SO[01;32mluizhlcosta@DESKTOP-233HMBM[00m:[01;34m/mnt/c/Users/luizh/Algoritmo_de_Banker_SO[00m$ eic t[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[Kexi t 4[K[K
+[?2004lexit
+
+Script done on 2026-11-16 14:04:20-03:00 [COMMAND_EXIT_CODE="0"]
